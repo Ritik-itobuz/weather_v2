@@ -1,7 +1,7 @@
 const locationName = document.querySelector("input");
 const degree = document.querySelector(".degree h4");
 const feels = document.querySelector(".degree p");
-const icon = document.querySelector(".icon img");
+
 
 let res;
 
@@ -27,13 +27,6 @@ function addTemp() {
   degree.innerHTML = `${res.current.temp_c}<sup>o</sup>`;
   feels.innerHTML = `Feels ${res.current.feelslike_c}<sup>o</sup>`;
 
-//   icon_path = res.current.condition.icon.replace(
-//     "//cdn.weatherapi.com",
-//     "../assets"
-//   );
-//   icon_path = icon_path.replace(".png", ".svg");
-
-//   icon.src = icon_path;
 }
 
 locationName.addEventListener("keyup", (event) => {

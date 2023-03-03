@@ -11,24 +11,17 @@
     align-items: center;
     flex-direction: column;
 }
-.top {
-    width: 60%;
-    flex-direction: row;
-    position: relative;
-  }
-  
-  .top a img {
-    width: 20%;
-  }
+
+
 .text{
     position:absolute;
     background-color: lightgreen;
     padding: 10px;
-top:100px;
-color:darksalmon;
-left:60%;
-z-index:20;
-visibility: hidden;
+    top:100px;
+    color:darksalmon;
+    left:60%;
+    z-index:20;
+    visibility: hidden;
 
 }
 input {
@@ -39,9 +32,6 @@ input {
     color: #fff;
     width: 70%;
     margin: 0 20px;
-  }
-  .top:hover .tooltip-text {
-    visibility: visible !important;
   }
   
   .top {
