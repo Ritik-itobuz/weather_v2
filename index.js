@@ -8,32 +8,16 @@ var para = document.querySelector('p');
 select.addEventListener('change', setWeather);
 
 let res;
-// async function setWeather(){
-  
-//   var choice = select.value;
-
-  
-//   if(choice === 'Kerala'){
-//     const ans = await fetch('http://api.weatherapi.com/v1/current.json?key=0c80b2b56f1943ada19100744230103&q=London&aqi=no');
-//     console.log(ans);
-//   }else if (choice === 'delhi'){
-//     para.textContent = fetch('http://api.weatherapi.com/v1/current.json?key=0c80b2b56f1943ada19100744230103&q=London&aqi=no');
-//     console.log(ans);')
-//   }else if(choice === 'snowing'){
-//     para.textContent = 'snowing weather';
-//   }else if (choice === 'overcast'){
-//     para.textContent = 'may or may not rain';
-//   }else {
-//     para.textContent = '';
-//   }
-  
-// }
-
 
 async function getTemp(enteredCity) {
-  res = await fetch(`http://api.weatherapi.com/v1/current.json?key=0c80b2b56f1943ada19100744230103&q=${enteredCity}&aqi=no`)
-    .then((data) => {
-      return data.json();
+   res = await fetch(`http://localhost:5000/${enteredCity}`)
+   
+
+    .then((res) => {
+
+      return res.json();
+      
+
     })
     .catch((err) => {
       alert(err);
@@ -48,9 +32,10 @@ async function getTemp(enteredCity) {
 
 
 function addTemp() {
-  locationName.value = `${res.location.name}`;
-  degree.innerHTML = `${res.current.temp_c}<sup>o</sup>`;
-  feels.innerHTML = `Feels ${res.current.feelslike_c}<sup>o</sup>`;
+
+  locationName.value = `${res.location}`;
+  degree.innerHTML = `${res.data.tempC}<sup>o</sup>`;
+  feels.innerHTML = `Feels ${res.data.feelsLike}<sup>o</sup>`;
 
 }
 async function setWeather()
@@ -59,10 +44,6 @@ async function setWeather()
       const ans = await getTemp(`${choice}`);
     
 }
-  
-
-  
-
 
 locationName.addEventListener("keyup", (event) => {
   if (event.key === "Enter") {
@@ -71,5 +52,5 @@ locationName.addEventListener("keyup", (event) => {
 });
 
 window.onload = () => {
-  getTemp("san marino");
+  getTemp("Riga");
 };
