@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="./style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
-</head>
-<body>
-    <div class = "container box">
-        <div class ="box top">
-            <a href="#"> <img src="./images/upload-icon.svg" alt="" /></a>
-            <input type="text" class ="input" />
-            <span class="text">Enter city</span>
-            <a href="#"><img src="./images/notification.svg" alt="" /></a>
+  </head>
+  <body>
+    <div class="container box">
+      <div class="box top">
+        <a href="#"> <img src="./images/upload-icon.svg" alt="" /></a>
+        <input type="text" class="input" />
+        <span class="text">Enter city</span>
+        <a href="#"><img src="./images/notification.svg" alt="" /></a>
+      </div>
+      <div class="selectContainer">
+        <select name="" id="weather">
+          <option value="Riga">Riga</option>
+          <option value="delhi">Delhi</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="rajasthan">Rajasthan</option>
+          <option value="kerala">kerala</option>
+        </select>
+      </div>
+      <div class="weather-info box">
+        <div class="icon">
+          <img src="./images/img_temp.png" alt="icon" />
         </div>
-        <div class="selectContainer">
-            <select name="" id="weather">
-              <option value="Riga">Riga</option>
-              <option value="delhi">Delhi</option>
-              <option value="mumbai">Mumbai</option>
-              <option value="rajasthan">Rajasthan</option>
-              <option value="kerala">kerala</option>
-            </select>
-        </div>
-        <div  class = "weather-info box">
-            <div class="icon">
-                <img src="./images/img_temp.png" alt="icon"/>
-            </div>
-              <div class="degree flex-box">
+        <div class="degree flex-box">
           <h4 id="city"></h4>
           <p></p>
         </div>
-        </div>
-        <p class="bottom-text">
+      </div>
+      <p class="bottom-text">
         Make the most of this nice weather that I generated for you. Or Else
       </p>
-
     </div>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
